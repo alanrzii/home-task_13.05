@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Minimum and Maximum Validation</h2>
+<p>Enter a minimum and maximum value:</p>
+
+<label for="min">Minimum Value:</label>
+<input type="number" id="min"><br><br>
+
+<label for="max">Maximum Value:</label>
+<input type="number" id="max"><br><br>
+
+<button onclick="validateValues()">Validate</button>
+
+<script>
+function validateValues() {
+  const min = parseFloat(document.getElementById("min").value);
+  const max = parseFloat(document.getElementById("max").value);
+
+  if (isNaN(min) || isNaN(max)) {
+    alert("Please enter valid numeric values!");
+  } 
+  else if (min >= max) {
+    alert(" Minimum value must be less than Maximum value!");
+  }
+  else {
+    alert(`✓ Valid range: ${min} < ${max}`);
+  }
+}
+</script>
+
+</body>
+</html>

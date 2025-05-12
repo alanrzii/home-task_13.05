@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Math Made Easy</h2>
+<p>Shortcut operators in action:</p>
+<div id="displayArea"></div>
+
+<script>
+let balance = 50;
+let displayArea = document.getElementById("displayArea");
+
+displayArea.innerHTML = `You start with $${balance}<br>`;
+
+balance += 20;
+displayArea.innerHTML += `After adding $20: $${balance}<br>`;
+
+balance -= 15;
+displayArea.innerHTML += `After spending $15: $${balance}<br>`;
+
+balance *= 2;
+displayArea.innerHTML += `After doubling: $${balance}<br>`;
+
+balance /= 5;
+displayArea.innerHTML += `After splitting 5 ways: $${balance}`;
+</script>
+</body>
+</html>

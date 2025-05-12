@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Shape-Shifting Variable</h2>
+<p>One variable, many identities:</p>
+<div id="shapeShifter"></div>
+
+<script>
+let variable = "I'm text";
+let output = document.getElementById("shapeShifter");
+
+output.innerHTML = `1. ${variable} (${typeof variable})<br>`;
+
+variable = 3.14;
+output.innerHTML += `2. ${variable} (${typeof variable})<br>`;
+
+variable = false;
+output.innerHTML += `3. ${variable} (${typeof variable})<br>`;
+
+variable = {type: "object"};
+output.innerHTML += `4. ${JSON.stringify(variable)} (${typeof variable})`;
+</script>
+</body>
+</html>
